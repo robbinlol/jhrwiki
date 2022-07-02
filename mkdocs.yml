@@ -2,8 +2,19 @@ site_name: jhrwiki
 
 theme:  
     name: material
-    nav_style: dark
-nav:
-    - Home: index.md
-    - About: about.md
 
+    static_templates:
+      - 404.html
+    include_search_page: false
+    search_index_only: true
+    language: zh
+
+    favicon: img/img.jpg
+nav:
+    - 首页: about.md
+    - 常用工具:
+      - 远程连接服务器: common/tricks.md 
+    - 日常开发:
+      - Python: common/tricks.md 
+      - C++:  common/tricks.md 
+      - Golang: common/tricks.md 
