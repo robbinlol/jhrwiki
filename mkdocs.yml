@@ -1,0 +1,7 @@
+site_name: jhrwiki 
+
+nav:
+    - Home: index.md
+    - About: about.md
+
+theme: readthedocs
