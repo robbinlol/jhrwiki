@@ -1,4 +1,30 @@
-site_name: jhrwiki
+site_name: test`
+use_directory_urls: false
 
+# Configuration
 theme:
   name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.top
+    - instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
