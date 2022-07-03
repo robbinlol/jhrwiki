@@ -17,6 +17,4 @@
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 -->
-
-
-## Hi everyone, welcome to jhr's blog.
+https://www.baidu.com
