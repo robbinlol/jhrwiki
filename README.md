@@ -1,1 +1,1 @@
-# https://robbinlol.github.io/jhrwiki/
+https://robbinlol.github.io/jhrwiki/

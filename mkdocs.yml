@@ -1,35 +1,65 @@
-site_name: jhrwiki 
+site_name: jhrwiki
 use_directory_urls: false
-#site_url: https://www.baidu.com
 
-theme:  
-    name: material
-    font:
-      text: Roboto
-      code: Roboto Mono
-    language: zh
-    features:
-      #- navigation.instant
-      #- navigation.tracking
-      - instant
-      - navigation.tabs
-      - navigation.tabs.sticky
-      - navigation.sections
-      - navigation.expand
-      - toc.follow
-    palette:
-      scheme: default
-      primary: indigo
-      accent: indigo
+# Configuration
+theme:
+  name: material
 
-    static_templates:
-      - 404.html
-    include_search_page: true
-    search_index_only: false
-    logo: img/img.jpg
-    icon:
-      logo: material/library-outline
-    favicon: img/img.jpg
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.top
+    - instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
+  favicon: img/img.jpg
+#site_name: jhrwiki 
+#use_directory_urls: false
+#
+#theme:  
+#    name: material
+#    font:
+#      text: Roboto
+#      code: Roboto Mono
+#    language: zh
+#    features:
+#      #- navigation.instant
+#      #- navigation.tracking
+#      - instant
+#      - navigation.tabs
+#      - navigation.tabs.sticky
+#      - navigation.sections
+#      - navigation.expand
+#      - toc.follow
+#    palette:
+#      scheme: default
+#      primary: indigo
+#      accent: indigo
+#
+#    static_templates:
+#      - 404.html
+#    include_search_page: true
+#    search_index_only: false
+#    logo: img/img.jpg
+#    icon:
+#      logo: material/library-outline
+#    favicon: img/img.jpg
 
 #markdown_extensions:
 #  - attr_list
@@ -47,8 +77,10 @@ theme:
 
 nav:
     - 首页: about.md
+
     - 常用工具:
       - 远程连接服务器: common/tricks.md 
+    
     - 日常开发:
       - Python: engineering/py.md 
       - C++:  engineering/cpp.md 
