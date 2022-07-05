@@ -1,4 +1,4 @@
-site_name: test`
+site_name: jhrwiki
 use_directory_urls: false
 
 # Configuration
@@ -17,14 +17,23 @@ theme:
   language: zh
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
-    - instant
+    #- instant
   palette:
     scheme: default
-    primary: indigo
+    primary: indigo 
     accent: indigo
   font:
     text: Roboto
     code: Roboto Mono
   icon:
     logo: logo
+  favicon: img/img.jpg
+
+nav:
+    - 首页: index.md
+
+    - 日常开发:
+        - git: develop/git.md
+        - vscode: develop/vscode.md
