@@ -14,7 +14,7 @@
     
     
       
-        <title>Cpp - jhrwiki</title>
+        <title>git - jhrwiki</title>
       
     
     
@@ -64,11 +64,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#c-knowledge" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cpp
+              git
             
           </span>
         </div>
@@ -167,13 +162,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../develop/git.html" class="md-tabs__link">
+      <a href="git.html" class="md-tabs__link md-tabs__link--active">
         日常开发
       </a>
     </li>
@@ -237,12 +234,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         日常开发
@@ -258,11 +257,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../develop/git.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="git.html" class="md-nav__link md-nav__link--active">
         git
       </a>
+      
     </li>
   
 
@@ -272,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../develop/vscode.html" class="md-nav__link">
+      <a href="vscode.html" class="md-nav__link">
         vscode
       </a>
     </li>
@@ -292,45 +299,20 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#c-knowledge" class="md-nav__link">
-    c++ knowledge
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Cpp</h1>
+                  <h1>git</h1>
                 
-                <h3 id="c-knowledge">c++ knowledge</h3>
+                <ul>
+<li>
+<p>在使用github时，由于一些原因，HTTPS连接经常为TIMEOUT，需要反复尝试clone。github的大部分代码都支持了SSH连接，目前使用来看，都很顺畅，但是相比HTTPS需要简单配置一下公钥。</p>
+<p>在github账户的设置<code>SSH and GPG key</code>中，新建<code>SSH keys</code>，将生成的id_rsa.pub复制，考虑到多台机器，公钥是以<code>ssh-rsa</code>开头，生成时的设定comment结尾的字符串。</p>
+</li>
+</ul>
                 
               
               
@@ -351,6 +333,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              首页
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="vscode.html" class="md-footer__link md-footer__link--next" aria-label="下一页: vscode" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              vscode
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

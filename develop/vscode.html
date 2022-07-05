@@ -14,7 +14,7 @@
     
     
       
-        <title>Cpp - jhrwiki</title>
+        <title>vscode - jhrwiki</title>
       
     
     
@@ -64,11 +64,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#c-knowledge" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cpp
+              vscode
             
           </span>
         </div>
@@ -167,13 +162,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../develop/git.html" class="md-tabs__link">
+      <a href="git.html" class="md-tabs__link md-tabs__link--active">
         日常开发
       </a>
     </li>
@@ -237,12 +234,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         日常开发
@@ -260,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../develop/git.html" class="md-nav__link">
+      <a href="git.html" class="md-nav__link">
         git
       </a>
     </li>
@@ -270,11 +269,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../develop/vscode.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="vscode.html" class="md-nav__link md-nav__link--active">
         vscode
       </a>
+      
     </li>
   
 
@@ -292,45 +299,24 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#c-knowledge" class="md-nav__link">
-    c++ knowledge
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Cpp</h1>
+                  <h1>vscode</h1>
                 
-                <h3 id="c-knowledge">c++ knowledge</h3>
+                <p>在连接服务器进行开发时，vscode配合remote SSH无疑是最主流的做法，但从一个原生vscode——姑且认为是浏览器——到一个赏心悦目的称手的编译器，还需要做出一些配置。</p>
+<p>文章将不断记录vscode的配置过程。</p>
+<ul>
+<li>
+<p>连接远程服务器时，如果每次ssh username@ip，输入密码将会很繁琐，尤其当远程机器不止一台时，很容易忘记密码或者输入错误，因为Linux输入密码时不会显示输入状态。这时可以考虑将ssh生成的公钥放在目标机器上，这样下次可以免密登录。SSH生成秘钥的指令如下</p>
+<p><code>ssh-keygen -t rsa -b 2048 "comment"</code></p>
+<p>默认生成<code>id_rsa</code>和<code>id_rsa.pub</code>，将<code>id_rsa.pub</code>拷贝到目标机器的<code>.ssh/authorithed_keys</code>中，vscode支持SFTP，可以直接拖拽，命令行用scp指令发送也可。</p>
+<p>需要注意的是<code>authorithed_keys</code>的权限为owner的rw，group和others均没有权限，由于拖拽可能权限会改变，需要<code>chmod</code>一下，这样就可以愉快的免密登录远程服务器了。</p>
+</li>
+</ul>
                 
               
               
@@ -351,6 +337,26 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="git.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: git" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              git
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
