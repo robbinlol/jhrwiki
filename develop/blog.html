@@ -14,7 +14,7 @@
     
     
       
-        <title>Tricks - jhrwiki</title>
+        <title>利用MkDocs搭建博客 - jhrwiki</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ssh" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tricks
+              利用MkDocs搭建博客
             
           </span>
         </div>
@@ -167,14 +167,32 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../develop/git.html" class="md-tabs__link">
-        日常开发
+      <a href="git.html" class="md-tabs__link md-tabs__link--active">
+        日常工具
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../engineering/cpp.html" class="md-tabs__link">
+        语言
       </a>
     </li>
   
@@ -237,21 +255,23 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        日常开发
+        日常工具
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="日常开发" data-md-level="1">
+      <nav class="md-nav" aria-label="日常工具" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          日常开发
+          日常工具
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -260,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../develop/git.html" class="md-nav__link">
+      <a href="git.html" class="md-nav__link">
         git
       </a>
     </li>
@@ -272,8 +292,129 @@
   
   
     <li class="md-nav__item">
-      <a href="../develop/vscode.html" class="md-nav__link">
+      <a href="vscode.html" class="md-nav__link">
         vscode
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          利用MkDocs搭建博客
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="blog.html" class="md-nav__link md-nav__link--active">
+        利用MkDocs搭建博客
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    本地搭建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自动部署
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        语言
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="语言" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/cpp.html" class="md-nav__link">
+        C++
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/py.html" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/go.html" class="md-nav__link">
+        Golang
       </a>
     </li>
   
@@ -309,8 +450,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSH
+  <a href="#_1" class="md-nav__link">
+    本地搭建
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自动部署
   </a>
   
 </li>
@@ -328,10 +476,89 @@
               
                 
                 
-                  <h1>Tricks</h1>
+                  <h1>利用MkDocs搭建博客</h1>
                 
-                <h2 id="ssh">SSH</h2>
-<pre><code>ssh-keygen -t rsa -b 2048 &quot;comment&quot;
+                <p>利用Github配合Mkdocs搭建个人博客的建议来自<a href="https://mp.weixin.qq.com/s/4ENpHo8ROx1ph57JLmvFJQ">OneFlow的一篇公众号</a>，之前苦于前端知识的匮乏以及租服务器的麻烦，这件事一直没有施行，通过这个方法很轻松的搭建起了个人博客。</p>
+<p>博客的搭建方法主要参考了</p>
+<ul>
+<li>公众号中提及的<a href="https://zhongshsh.github.io/BlogInOF">钟珊珊的博客</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/getting-started/">Mkdocs官方文档</a></li>
+<li><a href="https://www.mkdocs.org/getting-started/">Material for MkDocs的官方文档</a></li>
+</ul>
+<h2 id="_1">本地搭建</h2>
+<p>安装Mkdocs</p>
+<pre><code class="language-python">pip install mkdocs
+</code></pre>
+<p>新建Github项目，此处需要注意的是网上教程在新建显目时设立的项目名为<strong>username.github.io</strong>，之后可以通过该连接直接访问。而通过Mkdocs这种方法，新建的项目名即为正常项目名，将来访问时将通过<strong>username.github.io/项目名</strong>来访问。</p>
+<ol>
+<li>
+<p>本地新建同github项目名的Mkdocs项目，例如<code>mkdocs new my_blog</code>，将其中的文件夹拷贝进clone下来的github项目中</p>
+</li>
+<li>
+<p>按照官方文档进行文件层级的划分，在本地调试达到满意效果后即可上传部署</p>
+</li>
+<li>
+<p>新建<code>gh-pages</code>分支</p>
+<p><code>bash
+git checkout -b gh-pages</code></p>
+<p>此时应处于gh-pages分支中，使用如下指令编译项目</p>
+<p><code>bash
+mkdocs build</code></p>
+</li>
+<li>
+<p>删除site之外的文件，并将site内的内容拷贝到当前目录</p>
+<p><code>bash
+cp -ra site/*</code></p>
+</li>
+<li>
+<p>git push到相应的分支</p>
+</li>
+</ol>
+<h2 id="_2">自动部署</h2>
+<p>github Actions是一种自动化操作，博客每次更新要手动编译并push比较麻烦，下面的脚本实现了自动部署。</p>
+<p>在项目的Actions中新建一个workflow，并将如下命令复制其中</p>
+<pre><code class="language-yml"># This is a basic workflow to help you get started with Actions
+
+name: public site
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called &quot;build&quot;
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Install mkdocs
+        run: |
+          python -m pip install mkdocs==1.2.2
+          python -m pip install mkdocs-material==7.1.11
+          python -m pip install mkdocs-material-extensions==1.0.1
+          python -m pip install mike==1.0.1
+
+      - name: Create html
+        run: mkdocs build
+
+      - name: Public
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
 </code></pre>
                 
               
@@ -354,6 +581,41 @@
         
 <footer class="md-footer">
   
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="vscode.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: vscode" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              vscode
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../engineering/cpp.html" class="md-footer__link md-footer__link--next" aria-label="下一页: C++" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              C++
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -373,7 +635,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
