@@ -16,6 +16,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: zh
   features:
+    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -34,6 +35,12 @@ theme:
 nav:
     - 首页: index.md
 
-    - 日常开发:
+    - 日常工具:
         - git: develop/git.md
         - vscode: develop/vscode.md
+        - 利用MkDocs搭建博客: develop/blog.md
+    
+    - 语言:
+        - C++: engineering/cpp.md
+        - Python:  engineering/py.md
+        - Golang:  engineering/go.md
