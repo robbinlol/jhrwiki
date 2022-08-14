@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-knowledge" class="md-skip">
+        <a href="#python" class="md-skip">
           跳转至
         </a>
       
@@ -364,6 +364,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Python
@@ -379,6 +381,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -387,8 +391,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-knowledge" class="md-nav__link">
-    python knowledge
+  <a href="#python-aiges" class="md-nav__link">
+    为了实现本地能够模拟线上调试，Python 可以安装aiges模块
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    实现一个Python加载器插件
   </a>
   
 </li>
@@ -435,6 +446,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -443,8 +456,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-knowledge" class="md-nav__link">
-    python knowledge
+  <a href="#python-aiges" class="md-nav__link">
+    为了实现本地能够模拟线上调试，Python 可以安装aiges模块
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    实现一个Python加载器插件
   </a>
   
 </li>
@@ -462,9 +482,29 @@
               
                 
                 
-                  <h1>Python</h1>
-                
-                <h3 id="python-knowledge">python knowledge</h3>
+                <h1 id="python">Python加载器插件</h1>
+<h2 id="python-aiges">为了实现本地能够模拟线上调试，Python 可以安装<code>aiges</code>模块</h2>
+<pre><code class="language-python">pip install aiges
+pip install --upgrade aiges
+</code></pre>
+<h2 id="python_1">实现一个Python加载器插件</h2>
+<ul>
+<li>快速开始一个Python 项目</li>
+</ul>
+<pre><code class="language-python">python -m aiges create &quot;project&quot;
+</code></pre>
+<ul>
+<li>
+<p>目前Python加载器插件只支持非流式操作，最重要的实现逻辑是<code>wrapperOnceExec</code>函数</p>
+</li>
+<li>
+<p>为了达到模拟线上访问请求的目的，本地需要额外声明<code>UserRequest</code>和<code>UserResponse</code>两个类</p>
+<ul>
+<li><code>UserRequest</code>类，模拟了用户访问请求参数中的<code>key = value</code>对</li>
+<li><code>UserResponse</code>类，模拟了用户响应中的<code>key = value</code>对</li>
+</ul>
+</li>
+</ul>
                 
               
               

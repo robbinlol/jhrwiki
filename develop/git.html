@@ -286,6 +286,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           git
@@ -301,6 +303,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -309,22 +313,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    Git操作
-  </a>
-  
-    <nav class="md-nav" aria-label="Git操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gitssh" class="md-nav__link">
-    git的SSH连接
+  <a href="#github-ssh-keys" class="md-nav__link">
+    配置Github SSH Keys
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    提交PR
+  </a>
   
 </li>
       
@@ -448,6 +446,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -456,22 +456,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    Git操作
-  </a>
-  
-    <nav class="md-nav" aria-label="Git操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gitssh" class="md-nav__link">
-    git的SSH连接
+  <a href="#github-ssh-keys" class="md-nav__link">
+    配置Github SSH Keys
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    提交PR
+  </a>
   
 </li>
       
@@ -488,12 +482,44 @@
               
                 
                 
-                  <h1>git</h1>
-                
-                <h3 id="git">Git操作</h3>
-<h4 id="gitssh">git的SSH连接</h4>
-<p>在使用github时，由于一些原因，HTTPS连接经常为TIMEOUT，需要反复尝试clone。github的大部分代码都支持了SSH连接，目前使用来看，都很顺畅，但是相比HTTPS需要简单配置一下公钥。</p>
-<p>在github账户的设置<code>SSH and GPG key</code>中，新建<code>SSH keys</code>，拷贝生成的<code>id_rsa.pub</code>，考虑到多台机器，可以设定Title用来区别。公钥是以<code>ssh-rsa</code>开头，生成时设定的comment结尾的字符串。</p>
+                <h1 id="git">Git</h1>
+<h2 id="github-ssh-keys">配置Github SSH Keys</h2>
+<p>在使用github时，由于一些原因，HTTPS连接经常为TIMEOUT，需要反复尝试clone。github的大部分代码都支持了SSH连接，目前使用来看，都很顺畅，但是相比HTTPS需要简单配置一下<code>SSH</code>公钥。</p>
+<p>在github账户设置的<code>SSH and GPG key</code>中，新建<code>SSH keys</code>，拷贝生成的<code>id_rsa.pub</code>，考虑到多台机器，可以设定Title用来区别。公钥是以<code>ssh-rsa</code>开头，生成时设定的comment结尾的字符串。</p>
+<pre><code class="language-bash">ssh-keygen -t rsa -b 2048 &quot;comment&quot;
+</code></pre>
+<h2 id="pr">提交PR</h2>
+<p><strong>提交PR前的第一步，配置用户的姓名的邮箱，也就是签名，否则PR提交之后的作者是Unknown</strong></p>
+<ol>
+<li>
+<p>首先在 Github 上fork项目至自己的仓库，这样将会有完全修改的权限</p>
+</li>
+<li>
+<p><code>clone</code>至本地后， 此时<code>git remote -v</code>将会看到自己的仓库地址</p>
+</li>
+</ol>
+<pre><code class="language-bash">origin  git@github.com:robbinlol/jhrwiki.git (fetch)
+
+origin  git@github.com:robbinlol/jhrwiki.git (push)
+</code></pre>
+<ol>
+<li>
+<p>更新代码前一定要和远程保持更新，如果是一个更新频繁的项目的话，此时可能会提示无法合并，因为本地产生冲突，使用<code>git stash</code>暂存此次更改</p>
+</li>
+<li>
+<p>正常更新代码的三个操作，<code>git add</code>, <code>git commit --signoff -m "comment"</code>, <code>git push origin master</code>，之后可以使用<code>git tag</code>指令，方便记录提交，而不是通过<code>git log</code>或者<code>git reflog</code>查找不那么移动的哈希id1</p>
+</li>
+<li>
+<p>如果两次提交之间只有小的变动，如果作为两次提交，操作历史的图将会不那么好看，可以考虑<code>git rebase</code>指令，相当于重新定位<code>git HEAD</code>的位置，并把两次的提交合并</p>
+</li>
+<li>
+<p>最后，如果真的因为弄乱HEAD造成分离，可以考虑<code>git reset</code>，<code>reset</code>默认的程度是<code>--mixed</code>,保留源码，回退了Index（也就是add 操作的暂存区）和commit，此外还有<code>--soft</code>和<code>--hard</code>两种方式，分别为保留了源码和Index以及完全回退到指定版本</p>
+</li>
+</ol>
+<pre><code class="language-bash">git reset HEAD^2 # 回退两个版本
+
+git reset commitID # 回退到指定版本
+</code></pre>
                 
               
               
