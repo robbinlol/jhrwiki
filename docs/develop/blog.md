@@ -3,8 +3,8 @@
 博客的搭建方法主要参考了
 
 * 公众号中提及的[钟珊珊的博客](https://zhongshsh.github.io/BlogInOF)
-* [Mkdocs官方文档](https://squidfunk.github.io/mkdocs-material/getting-started/)
-* [Material for MkDocs的官方文档](https://www.mkdocs.org/getting-started/)
+* [Material for MkDocs的官方文档](https://squidfunk.github.io/mkdocs-material/getting-started/)
+* [Mkdocs官方文档](https://www.mkdocs.org/getting-started/)
 
 ## 本地搭建
 安装Mkdocs
