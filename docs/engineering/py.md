@@ -1,14 +1,14 @@
 # Python加载器插件
 
 ## 为了实现本地能够模拟线上调试，Python 可以安装`aiges`模块
-```python
+```bash
 pip install aiges
 pip install --upgrade aiges
 ```
 
 ## 实现一个Python加载器插件
 - 快速开始一个Python 项目
-```python
+```bash
 python -m aiges create "project"
 ```
 - 目前Python加载器插件只支持非流式操作，最重要的实现逻辑是`wrapperOnceExec`函数

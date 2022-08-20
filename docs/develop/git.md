@@ -34,3 +34,27 @@ git reset HEAD^2 # 回退两个版本
 
 git reset commitID # 回退到指定版本
 ```
+
+## **git**操作技巧
+
+- 取消`staging`区域的文件
+```bash
+git restore --staged files
+```
+
+- 创建`.gitignore`文件
+   直接说明需要忽略的规则
+```bash
+*.cc
+*.py
+src/
+include/
+lib/
+```
+
+- `git merge`合并分支以及手工解决冲突
+```bash
+git checkout A
+git merge B
+# 出现冲突的话，手动删除不一致的地方，再进行后续操作
+```
