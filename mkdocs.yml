@@ -42,5 +42,7 @@ nav:
     
     - 语言:
         - C++: engineering/cpp.md
+        - Makefile: engineering/makefile.md
         - Python:  engineering/py.md
         - Golang:  engineering/go.md
+
