@@ -382,13 +382,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#12345-uip8888-iip8888" class="md-nav__link">
-    实现了本地 12345端口 -&gt; U.IP:8888 -&gt; I.IP:8888的映射
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -578,13 +571,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#12345-uip8888-iip8888" class="md-nav__link">
-    实现了本地 12345端口 -&gt; U.IP:8888 -&gt; I.IP:8888的映射
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -630,14 +616,16 @@ scp -J U(user@ip) file Target(user@ip):/path
 <p>ssh -L 8889:localhost:8888 userName@Target.IP</p>
 <h1 id="su8889s12345">第二步，机器S做一次端口映射，将机器U的8889端口映射到机器S的12345端口</h1>
 <p>ssh -L 12345:localhost:8889 userName@U.IP
-<code>两步实现了一条链路的连通，所以引出来一个问题，有没有方法可以一步实现？答案是肯定的。
-- 一次指令实现两次端口转发
-启发来源于上面提到的`-J`参数，所以尝试了带上跳转机的端口转发，能够达到目的。</code>bash</p>
-<h1 id="12345-uip8888-iip8888">实现了本地 12345端口 -&gt; U.IP:8888 -&gt; I.IP:8888的映射</h1>
-<p>ssh -L 12345:userName@U.IP:8888 userName@T.IP
 ```</p>
 </li>
 </ol>
+<!--     两步实现了一条链路的连通，所以引出来一个问题，有没有方法可以一步实现？答案是肯定的。
+    - 一次指令实现两次端口转发
+    启发来源于上面提到的`-J`参数，所以尝试了带上跳转机的端口转发，能够达到目的。
+    ```bash
+    # 实现了本地 12345端口 -> U.IP:8888 -> I.IP:8888的映射 
+    ssh -L 12345:userName@U.IP:8888 userName@T.IP
+    ``` -->
                 
               
               
