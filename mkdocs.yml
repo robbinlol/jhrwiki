@@ -23,7 +23,7 @@ theme:
     #- instant
   palette:
     scheme: default
-    primary: indigo 
+    primary: indigo
     accent: indigo
   font:
     text: Roboto
@@ -33,16 +33,16 @@ theme:
   favicon: img/img.jpg
 
 nav:
-    - 首页: index.md
+  - 首页: index.md
 
-    - 日常工具:
-        - git: develop/git.md
-        - vscode: develop/vscode.md
-        - 利用MkDocs搭建博客: develop/blog.md
-    
-    - 语言:
-        - C++: engineering/cpp.md
-        - Makefile: engineering/makefile.md
-        - Python:  engineering/py.md
-        - Golang:  engineering/go.md
+  - 日常工具:
+      - git: develop/git.md
+      - vscode: develop/vscode.md
+      - 利用MkDocs搭建博客: develop/blog.md
+      - Linux游戏体验: develop/steam.md
 
+  - 语言:
+      - C++: engineering/cpp.md
+      - Makefile: engineering/makefile.md
+      - Python: engineering/py.md
+      - Golang: engineering/go.md
